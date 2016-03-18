@@ -7,14 +7,12 @@ public class ConcurrentCache<T> extends Cache<T> {
 	public ConcurrentCache(long cachingTime) {
 		
 		super(cachingTime);
-		new Object();
 		
 	}
 	
 	public ConcurrentCache(long cachingTime, int maxSize) {
 		
 		super(cachingTime, maxSize);
-		new Object();
 		
 	}
 
