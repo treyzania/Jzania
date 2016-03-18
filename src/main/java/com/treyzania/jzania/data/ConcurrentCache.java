@@ -4,19 +4,17 @@ import java.util.Collection;
 
 public class ConcurrentCache<T> extends Cache<T> {
 
-	private Object threadLock;
-	
 	public ConcurrentCache(long cachingTime) {
 		
 		super(cachingTime);
-		this.threadLock = new Object();
+		new Object();
 		
 	}
 	
 	public ConcurrentCache(long cachingTime, int maxSize) {
 		
 		super(cachingTime, maxSize);
-		this.threadLock = new Object();
+		new Object();
 		
 	}
 
