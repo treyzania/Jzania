@@ -13,7 +13,7 @@ import java.util.ListIterator;
  *
  * @param <T> The type of object stored by this cache.
  */
-public class Cache<T> {
+public class Cache<T> implements Iterable<T> {
 
 	private List<Entry<T>> cacheEntries;
 	private long cacheTime;
@@ -143,6 +143,7 @@ public class Cache<T> {
 	/**
 	 * @return An iterator of the values in the cache.
 	 */
+	@Override
 	public Iterator<T> iterator() {
 		return new CacheIterator<>(this.cacheEntries.iterator());
 	}
@@ -153,7 +154,6 @@ public class Cache<T> {
 	public ListIterator<Entry<T>> entryIterator() {
 		return this.cacheEntries.listIterator();
 	}
-	
 	
 	public static class Entry<T> implements Comparable<Entry<T>> {
 		
