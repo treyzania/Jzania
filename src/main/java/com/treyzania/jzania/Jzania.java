@@ -1,4 +1,4 @@
-package com.treyzania.jzania.data;
+package com.treyzania.jzania;
 
 import java.util.logging.Logger;
 
