@@ -6,23 +6,31 @@ public class Jzania {
 
 	private static boolean inited = false;
 	
-	private static Logger log;
+	private static Logger jzaniaLogger;
 	
 	public static void init() {
 		
 		if (inited) return;
 		
-		log = Logger.getLogger("Jzania");
+		jzaniaLogger = Logger.getLogger("Jzania");
 		
 		// Add more things as necessary.
 		
 		inited = true;
-		log.info("Jzania initalized.");
+		jzaniaLogger.info("Jzania initalized.");
 		
 	}
 	
 	public static Logger getLogger() {
-		return log;
+		return jzaniaLogger;
+	}
+	
+	public static void setLogger(Logger logger) {
+		
+		init();
+		
+		jzaniaLogger = logger;
+		
 	}
 	
 }
