@@ -13,13 +13,13 @@ import java.util.ListIterator;
  *
  * @param <T> The type of object stored by this cache.
  */
-public class Cache<T> implements Iterable<T> {
+public class TimedQueue<T> implements Iterable<T> {
 
 	private List<Entry<T>> cacheEntries;
 	private long cacheTime;
 	private int cacheMaxSize;
 	
-	public Cache(long cachingTime, int maxSize) {
+	public TimedQueue(long cachingTime, int maxSize) {
 		
 		this.cacheTime = cachingTime;
 		this.cacheMaxSize = maxSize;
@@ -28,7 +28,7 @@ public class Cache<T> implements Iterable<T> {
 		
 	}
 	
-	public Cache(long cachingTime) {
+	public TimedQueue(long cachingTime) {
 		this(cachingTime, Integer.MAX_VALUE);
 	}
 	

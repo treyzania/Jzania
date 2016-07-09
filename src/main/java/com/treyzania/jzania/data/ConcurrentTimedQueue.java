@@ -2,15 +2,15 @@ package com.treyzania.jzania.data;
 
 import java.util.Collection;
 
-public class ConcurrentCache<T> extends Cache<T> {
+public class ConcurrentTimedQueue<T> extends TimedQueue<T> {
 
-	public ConcurrentCache(long cachingTime) {
+	public ConcurrentTimedQueue(long cachingTime) {
 		
 		super(cachingTime);
 		
 	}
 	
-	public ConcurrentCache(long cachingTime, int maxSize) {
+	public ConcurrentTimedQueue(long cachingTime, int maxSize) {
 		
 		super(cachingTime, maxSize);
 		
