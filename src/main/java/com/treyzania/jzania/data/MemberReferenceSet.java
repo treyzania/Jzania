@@ -4,8 +4,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import java.util.function.IntConsumer;
-import java.util.function.IntFunction;
 import java.util.function.ToIntFunction;
 
 public class MemberReferenceSet<T> implements Set<T> {
@@ -13,7 +11,7 @@ public class MemberReferenceSet<T> implements Set<T> {
 	private ToIntFunction<T> hasher;
 	private Set<MREntry> entries;
 	
-	public MemberReferenceSet(ToIntFunction hasher) {
+	public MemberReferenceSet(ToIntFunction<T> hasher) {
 		
 		this.hasher = hasher;
 		this.entries = new HashSet<>();
