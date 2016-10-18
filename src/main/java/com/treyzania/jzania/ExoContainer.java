@@ -52,4 +52,8 @@ public class ExoContainer {
 		
 	}
 	
+	public void addHook(Consumer<CallbackThrowable> callback) {
+		this.hooks.add(callback);
+	}
+	
 }
